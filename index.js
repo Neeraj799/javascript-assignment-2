@@ -221,6 +221,40 @@ var productList = [
     }
   ];
 
+  var clothingSection = document.getElementById("clothing-section");
+
+
+
+  function renderCard(productImage, productName, productBrand, productPrice) {
+    console.log(productImage, productName, productBrand, productPrice);
+    var productCard = document.createElement("div");
+    productCard.className = "product-card";
+    var productImageElement = document.createElement("img");
+    productImageElement.className = "product-image";
+    productImageElement.src = productImage;
+    productCard.appendChild(productImage);
+    clothingSection.appendChild(productCard);
+    var productDetails = document.createElement("div");
+    productDetails.className = "product-details";
+    var productNameElement = document.createElement("h3");
+    productNameElement.className = "product-name";
+    productNameElement.innerText = productName;
+    var productBrandElement = document.createElement("h4");
+    productBrandElement.className = "product-brand";
+    productBrandElement.innerText = productBrand;
+    var productPriceElement = document.createElement("h5");
+    productPriceElement.className = "product-price";
+    productPriceElement.innerText = productPrice;
+    productDetails.append(productNameElement, productBrandElement, productPriceElement);
+    productCard.appendChild(productDetails);
+    clothingSection.appendChild(productCard);
+  }
+  
+  for(var i = 0; i < productList.length; i++) {
+    console.log(productList[i]);
+    renderCard(productList[i].preview, productList[i].name , productList[i].brand, productList[i].price);
+  }
+
 //   <div class="product-card">
 //   <img  
 //   class="product-image"
@@ -234,11 +268,7 @@ var productList = [
 // </div>
 // </div>
 
-var clothingSection = document.getElementById("clothing-section");
-var productCard = document.createElement("div");
-productCard.className = "product-card";
-var productImage = document.createElement("img");
-productImage.className = "product-image";
-productImage.src = "https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg";
-productCard.appendChild(productImage);
-clothingSection.appendChild(productCard);
+
+
+
+
