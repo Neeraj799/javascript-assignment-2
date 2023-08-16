@@ -222,7 +222,7 @@ var productList = [
   ];
 
   var clothingSection = document.getElementById("clothing-section");
-
+  var accessorySection = document.getElementById("accessory-section");
 
 
   function renderCard(productImage, productName, productBrand, productPrice) {
@@ -232,7 +232,7 @@ var productList = [
     var productImageElement = document.createElement("img");
     productImageElement.className = "product-image";
     productImageElement.src = productImage;
-    productCard.appendChild(productImage);
+    productCard.appendChild(productImageElement);
     clothingSection.appendChild(productCard);
     var productDetails = document.createElement("div");
     productDetails.className = "product-details";
@@ -248,11 +248,16 @@ var productList = [
     productDetails.append(productNameElement, productBrandElement, productPriceElement);
     productCard.appendChild(productDetails);
     clothingSection.appendChild(productCard);
+    return productCard;
   }
   
   for(var i = 0; i < productList.length; i++) {
-    console.log(productList[i]);
-    renderCard(productList[i].preview, productList[i].name , productList[i].brand, productList[i].price);
+    var productCard = renderCard(productList[i].preview, productList[i].name, productList[i].brand, productList[i].price);
+    if(productList[i].isAccessory == true){
+      accessorySection.appendChild(productCard);
+    } else {
+      clothingSection.appendChild(productCard);
+    }
   }
 
 //   <div class="product-card">
