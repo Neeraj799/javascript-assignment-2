@@ -221,6 +221,7 @@ var productList = [
     }
   ];
 
+
   var clothingSection = document.getElementById("clothing-section");
   var accessorySection = document.getElementById("accessory-section");
 
@@ -260,18 +261,7 @@ var productList = [
     }
   }
 
-//   <div class="product-card">
-//   <img  
-//   class="product-image"
-//   src="https://assets.myntassets.com/h_1440,q_100,w_1080/v1/assets/images/7579188/2018/11/5/08a7b230-ee8f-46c0-a945-4e835a3c01c01541402833619-United-Colors-of-Benetton-Men-Sweatshirts-1271541402833444-1.jpg"/>
-//   <div class="product-details">
-//   <h3 class="product-name">
-//       Men Navy Blue Solid Sweatshirt
-//   </h3>
-//   <h4 class="product-brand"> United Colors of benetton</h4>
-//   <h5 class="product-price"> Rs 2599 </h5>
-// </div>
-// </div>
+
 
 
 
